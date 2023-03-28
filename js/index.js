@@ -18,10 +18,8 @@ for(let i = 0; i < skills.length; i++) {
     skillsList.appendChild(skill);
 }
 
+//Create Massage form
 const messageForm = document.getElementsByName('leave_message');
-
-// console.log(messageForm);
-
 
 messageForm[0].addEventListener("submit", function answer(evt){
     evt.preventDefault();
@@ -33,7 +31,7 @@ messageForm[0].addEventListener("submit", function answer(evt){
     console.log(name, email, message);
     
     const messageSection = document.getElementById("messages");
-    // console.log(messageSection);
+    
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
     newMessage.innerHTML = `<a href=mailto:${email}>${name}</a><span> wrote: ${message} </span>`;
@@ -41,7 +39,6 @@ messageForm[0].addEventListener("submit", function answer(evt){
     const removeButton = document.createElement('button');
     removeButton.textContent = 'remove';
     removeButton.setAttribute('type','button');
-    removeButton.className = 'removeButton';
     
         removeButton.addEventListener('click', (event)=>{
             const entry = event.target.parentNode;
@@ -56,5 +53,5 @@ messageForm[0].addEventListener("submit", function answer(evt){
         newMessage.appendChild(removeButton);
         messageList.appendChild(newMessage);
    
-    messageForm[0].reset();
+    messageForm.reset();
 });
