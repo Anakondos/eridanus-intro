@@ -39,6 +39,7 @@ messageForm[0].addEventListener("submit", function answer(evt){
     const removeButton = document.createElement('button');
     removeButton.textContent = 'remove';
     removeButton.setAttribute('type','button');
+    removeButton.setAttribute('class','rem-button');
     
         removeButton.addEventListener('click', (event)=>{
             const entry = event.target.parentNode;
@@ -54,4 +55,66 @@ messageForm[0].addEventListener("submit", function answer(evt){
     messageList.appendChild(newMessage);
    
     messageForm.reset();
+
 });
+
+// AJAX  request creat
+
+var githubRequest = new XMLHttpRequest();
+githubRequest.open('GET',"https://api.github.com/users/Anakondos/repos");
+githubRequest.send();
+
+// selector for propogate data
+
+
+githubRequest.addEventListener('load', () => {
+    const repositories = JSON.parse(githubRequest.responseText);
+
+    console.log(repositories);
+
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+
+    for(let i = 0; i < repositories.length; i++) {
+        
+        const project = document.createElement('li');
+        // project.innerText = repositories[i].name;
+
+        // console.log(project);
+        
+        const projectLink = document.createElement("a");
+
+        projectLink.innerText = repositories[i].name;
+
+        console.log(repositories[i].name);
+        projectLink.href = repositories.html_url;
+        projectLink.target = "_blank";
+
+        const projectDescription = document.createElement("p");
+        projectDescription.innerText = repositories[i].description;
+
+
+
+
+        project.appendChild(projectLink);
+        project.appendChild(projectDescription);
+   
+        projectList.appendChild(project);
+
+
+             //styling
+             project.style.listStyleType = "none";
+             project.style.borderBottom = "2px solid black";
+             project.style.margin = "1rem 0";
+
+    }
+
+
+});
+
+
+
+
+
+
+

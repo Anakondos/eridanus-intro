@@ -57,8 +57,19 @@ textarea {
 .button {
     padding: 25px;
     margin-top: 10px;
-    background-color: lavender;
-    color: rgb(29, 7, 48);
+    background-color: rgb(250, 230, 243);
+    /* color: rgb(99, 12, 175); */
+    color: mediumorchid;
+    font-size: 2rem;
+}
+
+.rem-button {
+    padding: 5px;
+    margin-top: 5px;
+    background-color: rgb(250, 230, 243);
+    color: rgb(99, 12, 175);
+    color: rgb(102, 200, 179);
+    font-size: 1rem;
 }
 
 
@@ -96,7 +107,44 @@ img {
     margin: 0;
 
 }
-/* -------------skills----------------------------- */
+
+/* experience */
+
+.experience {
+   display: flex;
+   flex-direction: column;
+}
+.experience li {
+    text-align: center;
+    border: 5px solid rgb(138, 148, 110);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 5px;
+    background-color: rgb(141, 223, 223);
+    list-style-type: none;
+
+}
+/* message List */
+.message-list {
+    /* display: flex;
+    flex-wrap: wrap; */
+    justify-content: space-around;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#messages li{
+    display: flex;
+    background-color: rgb(225, 225, 225);
+}
+#message li {
+    display: inline;
+    margin: 20px 10px;
+}
+
+
+
+ /* skills */
+
 #skills {
     max-width: 75%;
 }
@@ -128,40 +176,40 @@ img {
     /* max-width: fit-content; */
     /* flex: 1; */
 }
-/* -------------experience-------------------- */
-.experience li {
+
+
+/* Leave a Message Form */
+#message-form{
+    display: flexbox; 
+  
+}
+#message-form label {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
     text-align: center;
-    border: 5px solid rgb(138, 148, 110);
-    border-radius: 10px;
-    margin-top: 20px;
-    padding: 5px;
-    background-color: rgb(141, 223, 223);
-    list-style-type: none;
-
-}
-/* -------------message---------------------- */
-.message-list {
-    /* display: flex;
-    flex-wrap: wrap; */
-    justify-content: space-around;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr;
-}
-#messages li{
-    display: flex;
-    background-color: rgb(225, 225, 225);
-}
-#message li {
-    display: inline;
-    margin: 20px 10px;
+    border: 1px dashed brown;
+    /* margin: 50px; */
+    padding: 10px;
+    /* list-style-type: none; */
+    border-radius: 100px;
+    /* display: inline; */
+    /* max-width: fit-content; */
+    /* flex: 1; */
 }
 
-@media screen and (max-width: 900px) 
-{  h1 {
-        color: chartreuse
-    }
-}    
-
+#message-form input, textarea {
+        margin-left: auto;
+        /* margin-right: auto;
+        width: 100px;
+        text-align: center;
+        border: 1px dashed brown;
+        margin: 20px 0;
+        padding: 50px;
+        list-style-type: none;  */
+        /* border-radius: 500px; */
+    }    
+/* ---------------------------------- */
 @media  screen and (max-width: 450px){
     
     p {
