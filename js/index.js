@@ -51,10 +51,10 @@ messageForm[0].addEventListener("submit", function answer(evt){
 
         });
         messageSection.style.display = "block";
-    newMessage.appendChild(removeButton); 
-    messageList.appendChild(newMessage);
+        newMessage.appendChild(removeButton); 
+        messageList.appendChild(newMessage);
    
-    messageForm.reset();
+    messageForm[0].reset();
 
 });
 
