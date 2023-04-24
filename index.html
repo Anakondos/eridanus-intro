@@ -15,6 +15,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Font Awesome 5.15.1 CSS -->
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+2. A
+
     </head>
     <body>
         <!-- Beginning of my visual part on the page-->
@@ -26,7 +31,8 @@
                     <li class="nav-item"><a href="#about">About</a></li> 
                     <li class="nav-item"><a href="#experience">Experience</a></li>
                     <li class="nav-item"><a href="#skills">Skills</a></li>
-                    <li class="nav-item"><a href="#contact">Contact</a></li>
+                    <li class="nav-item"><a href="#leaveMessage">Leave message</a></li>
+                    <li class="nav-item"><a href="#contact">Contact Me</a></li>
                 </ul>
             </nav>
         </header>
@@ -69,11 +75,17 @@
         <!-- Connect< -->
         <section id = "contact">
             <h2>Connect</h2>
-                <a href="mailto:Anakondos@mail.com">Anakondos@mail.com</a> <br>
-                <a href="https://github.com/Anakondos">Github</a>
+            <ul >
+               <li><a href="mailto:Anakondos@mail.com" class="fa fa-2x">email</a></li>
+               <li><a href="https://github.com/Anakondos" class="fa fa-2x">github</a></li>
+                <li><a href="https://www.linkedin.com/in/anton-kondakov-999597141/" class="fa fa-2x">linkedin</a></li>
+            <ul>
+                
+                
+                
         </section> 
         <!-- Leave a Message FORM -->
-        <section>
+        <section id="leaveMessage">
             <h2>Leave a Message</h2>
             <form name="leave_message" id = "message-form">
                 <label for="name">Your name</label>
@@ -83,7 +95,7 @@
                 <input type="email" id="email" name="email" required/> <br>
                 
                 <label for="message">message</label><br>
-                <textarea name="userMessage"></textarea><br>
+                <textarea name="userMessage" required="true"></textarea><br>
 
                 <button type="submit" id="btn" class="button">Submit</button><br>
             </form>
@@ -95,7 +107,16 @@
             </ul>
         </section>
     
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <div class="wrapper">
+                <a href="#" class="icon facebook">
+                  <div class="tooltip">Facebook</div>
+                  <span><i class="fab fa-facebook-f"></i></span>
+                </a>
+                </div>
+        </footer>
+
+
         <script src="js/index.js" defer></script>     
 </body>
 </html>
