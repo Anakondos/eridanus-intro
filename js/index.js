@@ -6,7 +6,7 @@ const copyright = document.createElement('h6');
 copyright.innerHTML = 'Copyright &copy; ' + thisYear + ' designed by Anton Kondakov';
 footer.appendChild(copyright); 
 
-let skills = ['Agile', 'JavaScript', 'HTML', 'CSS', 'Business Analytics', 'Flexbox', 'CSS Gride', 'NodeJS', 'sweet sam' ];
+let skills = ['Agile', 'JavaScript', 'HTML', 'CSS', 'Investment Banking', 'Project Management', 'SCRUM', 'NodeJS', 'Jira', 'Confluence' ];
 const skillsSection = document.querySelector('#skills');
 const skillsList = skillsSection.querySelector('ul');
 
@@ -187,7 +187,7 @@ for (let i = 0; i < repositories.length; i++) {
 
     //styling
     project.style.listStyleType = "none";
-    project.style.borderBottom = "1px solid black";
+    project.style.borderBottom = "border: 1px dashed rgb(74,101,172)";
     project.style.margin = "1rem 0";
 }
 })

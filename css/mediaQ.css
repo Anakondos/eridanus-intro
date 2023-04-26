@@ -1,0 +1,49 @@
+@media  screen and (max-width: 450px){
+
+}
+@media  screen and (max-width: 450px){
+    
+    p {
+        font-size: 50%!important;
+        text-align: center;
+
+    }
+
+    img {
+        border-radius: 50%;
+        height: 90%;
+        width: 90%;
+        object-fit: contain;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+    .hello div h1 {
+        /* font-family:  font-semibold; */
+        font-size: 1.5rem;
+        /* font-weight: bold;  */
+        /* color: rgb(51,39,42);  */
+        margin-left: 5px;
+    }
+
+    .hello div h2 {
+           
+            font-size: 1rem;
+           
+    } 
+
+    .hello {
+        display: block;
+    }
+
+    #about{
+        display: flex;
+        flex-direction: column;
+    }
+}
