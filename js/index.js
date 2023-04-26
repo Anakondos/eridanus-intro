@@ -1,9 +1,9 @@
 const today = new Date();
 const thisYear = today.getFullYear();
-const footer = document.querySelector('#footer');
-const copyright = document.createElement('p');
+const footer = document.querySelector('#copy');
+const copyright = document.createElement('h6');
 
-copyright.innerHTML = 'Anton Kondakov &copy ' + thisYear;
+copyright.innerHTML = 'Copyright &copy; ' + thisYear + ' designed by Anton Kondakov';
 footer.appendChild(copyright); 
 
 let skills = ['Agile', 'JavaScript', 'HTML', 'CSS', 'Business Analytics', 'Flexbox', 'CSS Gride', 'NodeJS', 'sweet sam' ];
@@ -55,7 +55,7 @@ messageForm[0].addEventListener("submit", (event) => {
     messageList.appendChild(newMessage);
 
 
-        //    Edit Form
+    // EDIT FORM
         const editButton = document.createElement("button");
     editButton.textContent = "edit";
     editButton.type = "button";
