@@ -1,17 +1,16 @@
 const today = new Date();
-// console.log(today);
 const thisYear = today.getFullYear();
-// console.log(thisYear);
-const footer = document.querySelector('#footer');
-const copyright = document.createElement('p');
-// console.log(copyright);
-copyright.innerHTML = 'Anton Kondakov &copy ' + thisYear;
+const footer = document.querySelector('#copy');
+const copyright = document.createElement('h6');
+
+copyright.innerHTML = 'Copyright &copy; ' + thisYear + ' designed by Anton Kondakov';
 footer.appendChild(copyright); 
-let skills = ['Agile', 'JavaScript', 'HTML', 'CSS', 'Business Analytics', 'Flexbox', 'CSS Gride', 'NodeJS', 'sweet sam' ];
+
+let skills = ['Agile', 'JavaScript', 'HTML', 'CSS', 'Investment Banking', 'Project Management', 'SCRUM', 'NodeJS', 'Jira', 'Confluence' ];
 const skillsSection = document.querySelector('#skills');
 const skillsList = skillsSection.querySelector('ul');
-// console.log(skillsList);
 
+// ADD SKILLS
 for(let i = 0; i < skills.length; i++) {
     const skill = document.createElement('li');
     skill.textContent = skills[i];
@@ -21,39 +20,81 @@ for(let i = 0; i < skills.length; i++) {
 //Create Massage form
 const messageForm = document.getElementsByName('leave_message');
 
-messageForm[0].addEventListener("submit", function answer(evt){
-    evt.preventDefault();
-    
-    const name = evt.target.name.value;
-    const email = evt.target.email.value;
-    const message = evt.target.userMessage.value;
+messageForm[0].addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log(event);
+    const usersName = event.target.name.value;
+    const usersEmail = event.target.email.value;
+    let usersMessage = event.target.userMessage.value;
 
-    console.log(name, email, message);
+    console.log(usersName, usersEmail, usersMessage);
     
     const messageSection = document.getElementById("messages");
-    
     const messageList = messageSection.querySelector('ul');
-    const newMessage = document.createElement('li');
-    newMessage.innerHTML = `<a href=mailto:${email}>${name}</a><span> wrote: ${message} </span>`;
-
+    let newMessage = document.createElement('li');
+    
+    newMessage.innerHTML = `<a href=mailto:${usersEmail}>${usersName}</a><span> wrote: ${usersMessage} </span>`;
+    
+    // REMOVE BUTTON
     const removeButton = document.createElement('button');
     removeButton.textContent = 'remove';
     removeButton.setAttribute('type','button');
     removeButton.setAttribute('class','rem-button');
     
-        removeButton.addEventListener('click', (event)=>{
+    removeButton.addEventListener('click', (event)=>{
             const entry = event.target.parentNode;
-            // console.log(entry);
+           
             entry.remove();
             if(messageList.childElementCount === 0){
                 messageSection.style.display = 'none';
             }
-
         });
-        messageSection.style.display = "block";
-        newMessage.appendChild(removeButton); 
+
+    messageSection.style.display = "block";
+    newMessage.appendChild(removeButton); 
+    messageList.appendChild(newMessage);
+
+
+    // EDIT FORM
+        const editButton = document.createElement("button");
+    editButton.textContent = "edit";
+    editButton.type = "button";
+    editButton.className = "edit-button";
+
+    const editForm = document.createElement("form");
+    const editInput = document.createElement("input");
+    editInput.type = "text";
+    editInput.value = usersMessage;
+    
+    console.log(usersMessage);
+
+    const saveButton = document.createElement("button");
+    saveButton.textContent = "Save";
+    saveButton.type = "submit";
+    editForm.append(editInput, saveButton);
+
+    editButton.addEventListener("click", () => {
+        newMessage.replaceWith(editForm);
+    });
+
+    editForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        usersMessage= editInput.value;
+
+        console.log(usersMessage.userMessage);
+        newMessage.innerHTML = `
+        <a href = "mailto:${usersEmail}">${usersName}</a>
+        <span>says: ${usersMessage}</span>
+        `;
+        newMessage.appendChild(removeButton);
+        newMessage.appendChild(editButton);
         messageList.appendChild(newMessage);
-   
+        editForm.remove();
+    });
+
+    newMessage.appendChild(editButton);
+
+    //-------------------------------    
     messageForm[0].reset();
 
 });
@@ -146,7 +187,7 @@ for (let i = 0; i < repositories.length; i++) {
 
     //styling
     project.style.listStyleType = "none";
-    project.style.borderBottom = "1px solid black";
+    project.style.borderBottom = "border: 1px dashed rgb(74,101,172)";
     project.style.margin = "1rem 0";
 }
 })
@@ -157,5 +198,4 @@ for (let i = 0; i < repositories.length; i++) {
     errorMessage.innerText = `There was an error! Github error message: ${error.message}`;
     projectSection.appendChild(errorMessage);
 });
-
 
