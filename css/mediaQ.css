@@ -21,10 +21,7 @@
 
 
     .hello div h1 {
-        /* font-family:  font-semibold; */
         font-size: 1.5rem;
-        /* font-weight: bold;  */
-        /* color: rgb(51,39,42);  */
         margin-left: 5px;
     }
 
@@ -67,12 +64,10 @@
         #hamnav label { 
             display: block; 
             color: white;
-            /* background: #a0ac95; */
             filter: drop-shadow(0 0 0.75rem rgb(6, 30, 89));
             background: #699bfe;
             font-style: normal;
             font-size: 1.2em;
-            /* padding: 10px; */
             border-radius: 20%;
         
         }
