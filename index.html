@@ -22,7 +22,7 @@
         <!-- Font Awesome 5.15.1 CSS -->
         <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'> -->
         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
-    
+        <script src="/js/hamnav.js"></script>
     
 
     </head>
@@ -30,28 +30,43 @@
         <!-- Beginning of my visual part on the page-->
         <header>
             <!-- Header Navigation -->
-            <nav >
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#about">Anton Kondakov</a></li>
-                    <li class="nav-item"><a href="#about">About</a></li> 
-                    <li class="nav-item"><a href="#experience">Experience</a></li>
-                    <li class="nav-item"><a href="#skills">Skills</a></li>
-                    <li class="nav-item"><a href="#leaveMessage">Leave message</a></li>
-                    <li class="nav-item"><a href="#contact">Contact Me</a></li>
-                </ul>
+            <nav id="hamnav">
+
+                <div id="ham">
+
+                    <div id="myname">
+                        <a href="/index.html">Anton Kondakov</a>
+                    </div>
+
+                    <!-- THE BUBERGER ICON -->
+                    <div >
+                        <label for="hamburger">&#9776;</label>
+                        <input type="checkbox" id="hamburger"/>
+                    </div> 
+
+                </div>
+
+                <div id="hamitems">
+                        <a href="#about" >About</a>
+                        <a href="#experience" >Experience</a>
+                        <a href="#skills" >Skills</a>
+                        <a href="#projects" >Projects</a>
+                        <a href="#leaveMessage" >Leave message</a>
+                        <a href="#contact" >Contact Me</a>
+                </div>
             </nav>
         </header>
         
         <section>
             
                 <div class="hello">
-                    <h1>Hello I'm Anton Kondakov</h1>
+                    <h1>Hello, I'm Anton Kondakov</h1>
                 </div>
                 
                 <section id="about">
                     
                     <div>
-                        <img src="./images/Photo_3.jpg">
+                        <img src="./images/Photo_3.jpg" id="photo">
                     </div>
                     <div>
                         <h2>About</h2>
@@ -92,16 +107,22 @@
 
         <!-- Connect< -->
         <section id = "contact">
-            <h2>Connect</h2>
-            <ul >
-               <li><a href="mailto:Anakondos@mail.com" class="fa fa-2x">email</a></li>
-               <li><a href="https://github.com/Anakondos" class="fa fa-2x">github</a></li>
-                <li><a href="https://www.linkedin.com/in/anton-kondakov-999597141/" class="fa fa-2x">linkedin</a></li>
-            <ul>
-                
-                
-                
+            <h2>Contact me</h2>
+            <div><a href="mailto:Anakondos@mail.com">
+                <img src="/images/undraw_envelope.svg" alt="email" class="connectIcon">
+                Anakondos@mail.com</a>
+            </div>
+
+            <div><a href="https://wa.me/+19105360602">
+                <img src="/images/undraw_chat-text.svg" alt="WhatsApp" class="connectIcon">
+                WhatsApp</a>
+            </div>
+            <div><a href="https://t.me/Anakondos">
+                <img src="/images/undraw_pointer.svg" alt="" class="connectIcon">
+                Telegram</a></div> 
         </section> 
+
+
         <!-- Leave a Message FORM -->
         <section id="leaveMessage">
             <h2>Leave a Message</h2>
@@ -136,6 +157,7 @@
                   <a href="https://join.skype.com/invite/pWho4RBb1EsZ" class="skype"></a>
                   
                 </div>
+
                 <div id="copy" class="m-0 mt-4 text-center text-capitalize">
 
                 </div>

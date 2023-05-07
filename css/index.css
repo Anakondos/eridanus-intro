@@ -140,44 +140,130 @@ footer {
     padding: 20px;
 }
 
-img {
+#photo {
     border: 5px solid rgb(110, 149, 158);
     border-style: inherit;
     border-radius: 100%;
     /* box-shadow: 10px 5px rgb(82, 90, 93); */
     filter: drop-shadow(0 0 0.75rem rgb(82, 90, 93));
 }
-.nav-item {
-    display: flex;
-    padding: 10px;
-    border: 0.5px solid;
-    padding: 10px;
-    box-shadow: 5px 10px #888888;
-    flex-basis: auto;
-    
-    filter: drop-shadow(0 0 0.75rem rgb(74,101,172));
-    border: 1px dashed rgb(74,101,172);
-}
 
-.nav-list {
-    flex-direction: row;
-    background-color: rgb(250,238,231);
-    position:sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-}
-.nav-item:hover {
-    /* background-color: rgb(103, 61, 124);
-    color: rgb(255, 255, 255); */
-    border-bottom: #6089f1 solid 0.3rem;
-    
-}
 
+/* [ON BIG SCREEN] */
+    /* (A) WRAPPER */
+        #hamnav {
+            display: flex;
+            width: 100%;
+            background: #c2c1d3;
+            filter: drop-shadow(0 0 0.75rem rgb(74,101,172));
+            justify-content: space-between;
+            position: sticky;
+            /* top: 0; */
+            margin-top: 1em;
+        }
+        #myname{
+            text-align: center;
+            /* padding-top: 10px; */
+            padding: 10px;
+            
+        }
+
+        #myname a{
+            /* color: #6089f1; */
+            /* text-decoration-color: #FF3CAC; */
+            text-decoration: none;
+            color: #2b292c;
+            font-family:  font-semibold;
+            filter: drop-shadow(0 0 0.75rem rgb(74,101,172));
+        }
+  /* (B) HORIZONTAL MENU ITEMS */
+        #hamitems {
+            display: flex;
+            
+        }
+        #hamitems a {
+            flex-grow: 1;
+            /* flex-basis: 0; */
+            padding: 10px;
+            /* color: white; */
+            text-decoration: none;
+            text-align: center;
+            color: #2b292c;
+            font-family:  font-semibold;
+        }
+
+  /* change color for main nav on hover */
+        #hamitems a:hover { 
+            /* background: #8c8989;  */
+            text-decoration:underline;
+            text-decoration-color: #699bfe;
+        }
+        #myname a:hover{
+            text-decoration:underline;
+            text-decoration-color: #699bfe;
+        }
+
+/* (C) HIDE HAMBURGER ICON */
+        #hamnav label, #hamburger { display: none; }
+
+/* old ver */
+        .nav-bar {
+            display: flex;
+            width: 100%;
+            background: #c2c1d3;
+            filter: drop-shadow(0 0 0.75rem rgb(74,101,172));
+            justify-content: space-between;
+            vertical-align: middle;
+            top: 0;
+        }
+        #myname {
+            /* text-align: center; */
+            /* margin: 20px 0; */
+            /* padding: 10px; */
+
+            /* border-radius: 10px; */
+            /* border: 1px dashed rgb(74,101,172); */
+            /* box-shadow: 5px 10px #888888; */
+        
+            /* width: 100px; */
+            /* filter: drop-shadow(0 0 0.75rem rgb(74,101,172)); */
+
+            /* max-width: fit-content; */
+            /* flex: 1; */
+        }
+        .nav-list {
+            display: block;
+            flex-direction: row;
+
+            padding: 10px;
+            justify-content: space-evenly;
+            margin: 0;
+            
+        }
+
+        .nav-item {
+            
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+
+            border-radius: 10px;
+            border: 1px dashed rgb(74,101,172);
+            box-shadow: 5px 10px #888888;
+        
+            width: 100px;
+            filter: drop-shadow(0 0 0.75rem rgb(74,101,172));
+            flex: 1;
+        }
+
+
+        .nav-item:hover {
+            background-color: rgb(103, 61, 124);
+            color: rgb(255, 255, 255); 
+            border-bottom: #6089f1 solid 0.3rem;
+        
+        }
+/* -------------------------------------- */
 /* experience */
 
 .experience {
@@ -193,10 +279,10 @@ img {
     border-radius: 10px;
     margin-top: 20px;
     padding: 5px;
-    /* background-color: rgb(224, 229, 240); */
+    
     list-style-type: none;
     flex-basis: auto;
-    /* filter: drop-shadow(0 0 0.75rem rgb(143, 155, 184)); */
+   
     filter: drop-shadow(0 0 0.75rem rgb(74,101,172));
 
 }
@@ -308,6 +394,22 @@ img {
         /* border-radius: 500px; */
     }    
 /* ---------------------------------- */
+.connectIcon {
+    width: 2rem;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    /* display: block; */
+    vertical-align: middle;
+    }
+
+#contact {
+
+    font-family:  font-semibold;
+    font-size: 1em;
+    /* font-weight: bold;  */
+    color: rgb(51,39,42); 
+
+}
 
 
 /* FOOTER ICONS */
